@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" sx={{ background: "lightblue", color: "black" }}>
+      <Container maxWidth="xl" sx={{ backgroundColor : 'lightblue', color: "black" }}>
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <EagleIcon
@@ -160,7 +160,12 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  display: "block",
+                  "&:hover": { color: "white" },
+                }}
               >
                 {page}
               </Button>
@@ -198,9 +203,9 @@ function ResponsiveAppBar() {
           </Box> */}
           <Box flexGrow={0}>
             <Box>
-              <FacebookOutlinedIcon sx={{p : 1}}/>
-              <TwitterIcon sx={{p : 1}}/>
-              <LinkedInIcon sx={{p : 1}}/>
+              <FacebookOutlinedIcon sx={{ p: 1 }} />
+              <TwitterIcon sx={{ p: 1 }} />
+              <LinkedInIcon sx={{ p: 1 }} />
             </Box>
           </Box>
         </Toolbar>
